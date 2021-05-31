@@ -9,7 +9,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.Random;
 
@@ -17,6 +20,7 @@ public class Frag2 extends Fragment {
 
     Button btnFrag2;
     LinearLayout bgFrag2;
+    ImageView iv;
 
     public Frag2() {
         // Required empty public constructor
@@ -36,6 +40,12 @@ public class Frag2 extends Fragment {
         View view = inflater.inflate(R.layout.fragment_frag2, container, false);
         btnFrag2 = view.findViewById(R.id.fragBtn2);
         bgFrag2 = view.findViewById(R.id.linearFrag2);
+        iv = view.findViewById(R.id.iv);
+
+        String imageUrl = "https://i.imgur.com/tGbaZCY.jpg";
+        Picasso.with(this.getActivity()).load(imageUrl).into(iv);
+
+
 
         btnFrag2.setOnClickListener(new View.OnClickListener() {
             @Override
