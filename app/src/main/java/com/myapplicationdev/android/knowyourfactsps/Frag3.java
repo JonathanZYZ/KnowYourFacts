@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import java.util.Random;
+
 
 public class Frag3 extends Fragment {
 Button btnChange;
@@ -31,7 +33,10 @@ LinearLayout layout;
         btnChange.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                layout.setBackgroundColor(Color.GREEN);
+
+                Random rdmColor = new Random();
+                int color = Color.argb(255, rdmColor.nextInt(256), rdmColor.nextInt(256), rdmColor.nextInt(256));
+                layout.setBackgroundColor(color);
             }
         });
         return view;
