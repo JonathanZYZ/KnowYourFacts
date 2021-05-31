@@ -2,4 +2,8 @@
     <string name="app_name">Know Your Facts (PS)</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="funfact1">
+        Singapore is made up of 63 ISLANDS <br/><br/>
+        Most of those islands are largely unoccupied and <br/>
+        used for military or industrial purposes.<br/></string>
 </resources>

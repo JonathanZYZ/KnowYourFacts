@@ -1,5 +1,7 @@
 package com.myapplicationdev.android.knowyourfactsps;
 
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +9,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
+
+import java.util.Random;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +20,8 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class Frag1 extends Fragment {
+    Button btnChangeColor;
+    LinearLayout llayout;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -59,6 +67,19 @@ public class Frag1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_frag1, container, false);
+        View view = inflater.inflate(R.layout.fragment_frag1, container, false);
+        btnChangeColor = view.findViewById(R.id.btnChange);
+        llayout = view.findViewById(R.id.llayoutId);
+
+
+        btnChangeColor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Random rdmColor = new Random();
+                int color = Color.argb(255, rdmColor.nextInt(256), rdmColor.nextInt(256), rdmColor.nextInt(256));
+                llayout.setBackgroundColor(color);
+            }
+        });
+        return view;
     }
 }
