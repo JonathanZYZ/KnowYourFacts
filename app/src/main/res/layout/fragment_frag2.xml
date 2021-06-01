@@ -16,10 +16,20 @@
         android:orientation="vertical">
 
 
+
+
+        <TextView
+            android:id="@+id/fragFact2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weiming can fly high high"
+            android:textSize="20dp" />
+
+
         <com.jsibbold.zoomage.ZoomageView
             android:id="@+id/iv"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="300dp"
             android:src="@mipmap/ic_launcher"
             app:zoomage_restrictBounds="false"
             app:zoomage_animateOnReset="true"
@@ -30,14 +40,6 @@
             app:zoomage_minScale="0.6"
             app:zoomage_maxScale="8"  />
 
-
-
-        <TextView
-            android:id="@+id/fragFact2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Weiming can fly high high"
-            android:textSize="20dp" />
 
         <Button
             android:id="@+id/fragBtn2"
