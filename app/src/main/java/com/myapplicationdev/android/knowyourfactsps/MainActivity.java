@@ -57,6 +57,13 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        case R.id:
+        newGame();
+        return true;
+        case R.id.help:
+        showHelp();
+        return true;
+        default:
         return super.onOptionsItemSelected(item);
     }
 }
