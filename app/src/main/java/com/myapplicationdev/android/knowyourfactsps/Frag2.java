@@ -11,16 +11,20 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
+import com.crazyhitty.chdev.ks.rssmanager.RssReader;
 import com.squareup.picasso.Picasso;
 
 import java.util.Random;
 
 public class Frag2 extends Fragment {
-
+    TextView tvTitle,tvDesc;
     Button btnFrag2;
     LinearLayout bgFrag2;
     ImageView iv;
+    private String finaleUrl = "https://www.singstat.gov.sg/rss";
+    private HandleXML obj;
 
     public Frag2() {
         // Required empty public constructor
@@ -40,7 +44,15 @@ public class Frag2 extends Fragment {
         View view = inflater.inflate(R.layout.fragment_frag2, container, false);
         btnFrag2 = view.findViewById(R.id.fragBtn2);
         bgFrag2 = view.findViewById(R.id.linearFrag2);
+        tvTitle = view.findViewById(R.id.fragFact2);
+        tvDesc = view.findViewById(R.id.fragFact3);
+
         iv = view.findViewById(R.id.iv);
+        obj = new HandleXML(finaleUrl);
+        obj.fetchXML();
+        while(obj.parsingComplete);
+        tvTitle.setText(obj.getTitle());
+        tvDesc.setText(obj.getDescription());
 
         String imageUrl = "https://wtffunfact.com/wp-content/uploads/2021/05/WTF-Fun-Fact-Presidents-Without-Pets.png";
         Picasso.with(this.getActivity()).load(imageUrl).into(iv);
