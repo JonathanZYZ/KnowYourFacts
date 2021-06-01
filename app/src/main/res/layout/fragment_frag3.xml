@@ -3,12 +3,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Frag3">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+
+    <LinearLayout
+        android:id="@+id/layoutFrag"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="@color/teal_200"
+        android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/tvFact1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingBottom="20dp"
+            android:text="Months that begin on a Sunday will always have a 'Friday the 13th.'" />
+
+        <TextView
+            android:id="@+id/tvFact2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingBottom="20dp"
+            android:text="Coca-Cola would be green if colouring weren’t added to it." />
+
+        <TextView
+            android:id="@+id/tvFact3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingBottom="20dp"
+            android:text="An ostrich's eye is bigger than its brain" />
+
+        <Button
+            android:id="@+id/btnChangeColour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change Colour" />
+    </LinearLayout>
 </FrameLayout>
