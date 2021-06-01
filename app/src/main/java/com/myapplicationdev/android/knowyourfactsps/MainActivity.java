@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     ViewPager vPager;
 
     Button btnLater;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         al = new ArrayList<Fragment>();
         al.add(new Frag1());
         al.add(new Frag2());
+        al.add(new Frag3());
 
         adapter = new MyFragmentPagerAdapter(fm, al);
 
@@ -65,7 +68,15 @@ public class MainActivity extends AppCompatActivity {
                 }
                 return true;
             case R.id.action_random:
-
+                Random rand = new Random();
+                int n = rand.nextInt(3);
+                if (n == 0){
+                    vPager.setCurrentItem(0, true);
+                } else if (n == 1){
+                    vPager.setCurrentItem(1, true);
+                } else if (n == 2){
+                    vPager.setCurrentItem(2, true);
+                }
                 return true;
             case R.id.action_next:
                 int max = vPager.getChildCount();
