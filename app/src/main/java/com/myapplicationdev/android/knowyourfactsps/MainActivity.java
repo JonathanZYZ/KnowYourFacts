@@ -73,13 +73,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_random:
                 Random rand = new Random();
                 int n = rand.nextInt(3);
-                if (n == 0){
-                    vPager.setCurrentItem(0, true);
-                } else if (n == 1){
-                    vPager.setCurrentItem(1, true);
-                } else if (n == 2){
-                    vPager.setCurrentItem(2, true);
-                }
+                vPager.setCurrentItem(n, true);
                 return true;
             case R.id.action_next:
                 int max = vPager.getChildCount();
