@@ -42,7 +42,7 @@ public class Frag2 extends Fragment {
         bgFrag2 = view.findViewById(R.id.linearFrag2);
         iv = view.findViewById(R.id.iv);
 
-        String imageUrl = "https://i.imgur.com/tGbaZCY.jpg";
+        String imageUrl = "https://wtffunfact.com/wp-content/uploads/2021/05/WTF-Fun-Fact-Presidents-Without-Pets.png";
         Picasso.with(this.getActivity()).load(imageUrl).into(iv);
 
 
