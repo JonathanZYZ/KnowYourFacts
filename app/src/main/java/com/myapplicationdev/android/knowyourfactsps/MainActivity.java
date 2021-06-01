@@ -57,13 +57,25 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        case R.id:
-        newGame();
-        return true;
-        case R.id.help:
-        showHelp();
-        return true;
-        default:
-        return super.onOptionsItemSelected(item);
+        switch (item.getItemId()) {
+            case R.id.action_previous:
+                if (vPager.getCurrentItem() > 0){
+                    int previousPage = vPager.getCurrentItem() - 1;
+                    vPager.setCurrentItem(previousPage, true);
+                }
+                return true;
+            case R.id.action_random:
+
+                return true;
+            case R.id.action_next:
+                int max = vPager.getChildCount();
+                if (vPager.getCurrentItem() < max-1){
+                    int nextPage = vPager.getCurrentItem() + 1;
+                    vPager.setCurrentItem(nextPage, true);
+                }
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
