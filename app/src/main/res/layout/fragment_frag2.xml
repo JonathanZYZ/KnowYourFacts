@@ -6,9 +6,29 @@
     tools:context=".Frag2">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:id="@+id/linearFrag2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="#00FF00"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/fragFact2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weiming can fly high high"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/fragBtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="change colour" />
+
+    </LinearLayout>
+
 
 </FrameLayout>
