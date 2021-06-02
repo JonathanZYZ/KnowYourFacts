@@ -30,7 +30,7 @@
             android:id="@+id/fragFact3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Weiming can fly high high"
+            android:text="McDonald’s once made bubblegum-flavored broccoli"
             android:textSize="20dp" />
 
         <com.jsibbold.zoomage.ZoomageView
